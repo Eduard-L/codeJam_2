@@ -2,7 +2,7 @@ import '../../index.css';
 import { Header } from '../Header/Header';
 import { Main } from '../Main/Main';
 import { Logo } from '../Logo/Logo';
-import { useState } from 'react';
+import { useState, useEfftect } from 'react';
 
 function App() {
   const [isPopupWithImgOpen, setIsPopupWithImgOpen] = useState(false);
@@ -12,7 +12,6 @@ function App() {
   function OpenPopupWithImages() {
     setIsPopupWithImgOpen(true)
   }
-
   function selectImage(imgsrc) {
     // document.querySelector('.card').style.backgroundImage = `url(${imgsrc})`
   }
@@ -24,7 +23,6 @@ function App() {
   function handleTextButtonClick() {
     //
   }
-
   return (
     <div className='App'>
       <div className='App__wrapper'>
@@ -44,5 +42,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

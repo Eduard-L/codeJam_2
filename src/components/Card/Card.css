@@ -2,7 +2,7 @@
 	height: 500px;
 	width: 340px;
 	margin: 0;
-	background-color: #eddbf0;
+	background-color: #EDDBF0;
 	border-radius: 10px;
 	display: grid;
 	/* flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 @media screen and (max-width: 999px) {
-	.card {
-		width: 360px;
-	}
+  .card {
+    width: 360px;
+  }
 }

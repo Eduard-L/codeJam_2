@@ -1,6 +1,6 @@
 import { Card } from '../Card/Card'
 import { Button } from '../Button/Button';
-
+import { PopupWithImages } from '../PopupWithImages/PopupWithImages'
 import { initialImages } from "../../utils/costants";
 import { Image } from "../Image/Image";
 import { useState } from 'react';
@@ -37,14 +37,20 @@ export function Main({ onTextButtonClick, onColorButtonClick, isPopupColorPicker
 
       <div className='button-wrapper'>
         <Button classType='button' text='Text' onButtonClick={onTextButtonClick} />
-        <Button classType='button' text='Color' onButtonClick={onColorButtonClick} />
-        {initialData.map((image) => {
+        <PopupColorPicker onColorPickerSubmit={onColorPickerSubmit} />
+        {initialImages.map((image) => {
           return (
-            <Image src={image.src} key={image.id} alt={image.alt} id={image.id} onImageClick={() => { }} />
+            <Image src={image.src} key={image.id} alt={image.alt} id={image.id} onImageClick={onImageClick} />
           )
         })}
       </div>
-
+      {/* <PopupWithImages isOpen={isOpen} >
+        {initialImages.map((image) => {
+          return (
+            <Image src={image.src} key={image.id} alt={image.alt} id={image.id} onImageClick={onImageClick} />
+          )
+        })}
+      </PopupWithImages> */}
     </div>
   )
 }

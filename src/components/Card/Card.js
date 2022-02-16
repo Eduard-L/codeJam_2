@@ -65,5 +65,3 @@ export function Card({ setInitialData, initialData, droppedImages, onDrop, cardB
     </div >
   )
 }
-
-// backgroundColor: `${cardBackgroundColor}` 
